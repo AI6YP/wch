@@ -2,7 +2,7 @@ wch experiments
 
 ## WCH-Link
 
-![](WCH-Link.png)
+![](assets/WCH-Link.png)
 
 https://www.wch.cn/products/WCH-Link.html
 
@@ -29,7 +29,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 
 CH32Vx03C-R0-1v0
 
-![](CH32Vx03C-R0-1v0.png)
+![](assets/CH32Vx03C-R0-1v0.png)
 
 MCU: CH32V203C8T6
 
