@@ -100,3 +100,6 @@ Freq=Flnb+9750000
 8 Экраны SSB Demodulator и SSB Modulator — только частоты звука Low cut и Hi cut.
 ![SSB Demod и SSB Mod](https://github.com/AI6YP/wch/assets/13078619/d3ab9b17-868d-4953-9dd8-1d18f20d7587)
 
+CC1310 в таком же корпусе, элементы 0402 
+![CC1310](https://github.com/AI6YP/wch/assets/13078619/b14c767f-2134-4016-a823-35b39ca13c2e)
+
