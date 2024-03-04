@@ -18,16 +18,28 @@ wmesg -w
 [ 1223.355473] cdc_acm 1-9.2:1.1: ttyACM0: USB ACM device
 ```
 
-# udev
+## udev
 
 ```
 sudo cp 49-wch-link.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-## EVB
+## Programmer
 
-CH32Vx03C-R0-1v0
+https://github.com/ch32-rs/wlink
+
+
+```
+cargo install --git https://github.com/ch32-rs/wlink
+```
+
+```
+~/.cargo/bin/wlink status
+```
+
+
+## CH32Vx03C-R0-1v0 Board
 
 ![](assets/CH32Vx03C-R0-1v0.png)
 
@@ -43,20 +55,22 @@ https://github.com/openwch/ch32v20x
 | SWCLK     | P2.10 | PA14  |
 | RST       | P2.12 | NRST  |
 
-https://github.com/ch32-rs/wlink
-
-
-```
-cargo install --git https://github.com/ch32-rs/wlink
-```
-
-```
-~/.cargo/bin/wlink status
-```
-
 * https://github.com/openwch/ch32v20x
-* https://github.com/cnlohr/ch32v003fun
-
-[ch32v20x.h](
+* [ch32v20x.h](
 https://github.com/openwch/ch32v20x/blob/main/EVT/EXAM/SRC/Peripheral/inc/ch32v20x.h)
 
+## CH32V003F4P6-R0-1v1 Board
+
+![](assets/CH32V003F4P6-R0-1v1.png)
+
+MCU: CH32V003F4P6
+
+| WCH-Link  | EVB   | MCU   |
+|-----------|-------|-------|
+| 3V3       | P2.2  | 3V3   |
+| GND       | P2.4  | GND   |
+| SWDIO     | P2.6  | PD1   |
+
+
+
+* https://github.com/cnlohr/ch32v003fun
