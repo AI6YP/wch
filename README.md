@@ -72,5 +72,8 @@ MCU: CH32V003F4P6
 | SWDIO     | P2.6  | PD1   |
 
 
+### References
 
 * https://github.com/cnlohr/ch32v003fun
+* https://github.com/tvlad1234/linux-ch32v003
+
