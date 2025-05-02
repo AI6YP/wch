@@ -112,7 +112,23 @@ Connect tor Goryn
 |PD1  |         |       |2  |   |38 | |
 |PD0  |         |       |1  |   |39 | |
 
+### Connect to FT2232H
 
+|port |f1       |WCH-J3 |color|FTD-J1 |port   |
+|-----|---------|-------|-----|-------|-------|
+|GND  |         |25     |blue |6      |       |
+|PA14 |SWCLK    |27     |orng |7      |ADBUS0 |
+|PA13 |SWDIO    |29     |red  |12     |ADBUS3 |
+
+
+
+## CH32V317W-EVT-R0 Board
+
+https://www.wch-ic.com/downloads/CH32V307DS0_PDF.html
+
+![](assets/CH32V317W-EVT-R0.avif)
+
+![](assets/CH32V317WCU6.avif)
 
 
 ### References
