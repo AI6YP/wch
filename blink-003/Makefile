@@ -1,4 +1,4 @@
-RISCV_PATH ?= /home/$(USER)/tools/riscv64-unknown-elf-toolsuite/latest
+RISCV_PATH ?= /tools/riscv64-unknown-elf-toolsuite/latest
 
 CC = $(RISCV_PATH)/bin/riscv64-unknown-elf-gcc
 OC = $(RISCV_PATH)/bin/riscv64-unknown-elf-objcopy
@@ -8,7 +8,7 @@ OD = $(RISCV_PATH)/bin/riscv64-unknown-elf-objdump
 CFLAGS += -c
 CFLAGS += -std=c11
 CFLAGS += -Wall
-CFLAGS += -Os
+CFLAGS += -O0
 # V2A
 CFLAGS += -march=rv32ec
 CFLAGS += -mabi=ilp32e
@@ -36,12 +36,15 @@ OBJS += $(C_SRC:.c=.o)
 %.lst: %.elf
 	$(OD) --source --all-headers --demangle --line-numbers --wide $< > $@
 
+%.bin: %.elf
+	$(OC) -S -O binary $< $@
+
 .PHONY: upload
 upload: $(MAIN).elf $(MAIN).lst
 	~/.cargo/bin/wlink flash $(MAIN).elf
 
 .PHONY: all
-all: $(MAIN).lst $(MAIN).elf
+all: $(MAIN).lst $(MAIN).elf $(MAIN).bin
 
 .PHONY: clean
 clean:
