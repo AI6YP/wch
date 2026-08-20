@@ -77,6 +77,19 @@ MCU: CH32V003F4P6
 
 MCU: CH32V307VCT6
 
+### Embedded WCH-LinkE programmer
+
+Non standard Firmware
+
+https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html
+
+https://file.wch.cn/download/file?id=418
+
+`
+minichlink -w WCH-LinkE-APP-IAP.bin 0x08000000
+`
+
+
 Schematic: https://github.com/openwch/ch32v307/blob/main/EVT/PUB/CH32V30xSCH.pdf
 
 P6: USB HS connector
